@@ -1,0 +1,47 @@
+{
+    "module": "MMM-MVVWiesty",
+    "repository": "",
+    "installScript": "",
+    "config": {
+        "type": "object",
+        "properties": {
+            "updateInterval": {
+                "description": "Update interval in milliseconds",
+                "type": "number",
+                "default": 300000,
+                "required": true,
+                "min": 1000
+            },
+            "maxEntries": {
+                "description": "Maximum number of entries displayed in the table",
+                "type": "number",
+                "default": 5,
+                "required": true,
+                "min": 1
+            },
+            "stopId": {
+                "description": "Stop ID",
+                "type": "string",
+                "default": "de:09162:6",
+                "required": true,
+                "minLength": 1
+            },
+            "filter": {
+                "description": "Filter for specific routes",
+                "type": "object",
+                "properties": {
+                    "S8": {
+                        "description": "S-Bahn Line S8",
+                        "type": "string",
+                        "default": "Herrsching"
+                    },
+                    "U2": {
+                        "description": "U-Bahn Line U2",
+                        "type": "string",
+                        "default": "Messestadt Ost"
+                    }
+                }
+            }
+        }
+    }
+}
