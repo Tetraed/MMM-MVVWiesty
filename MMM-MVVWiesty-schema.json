@@ -1,7 +1,7 @@
 {
     "module": "MMM-MVVWiesty",
-    "repository": "",
-    "installScript": "",
+    "position": "bottom_left",
+    "repository": "xxx",
     "config": {
         "type": "object",
         "properties": {
@@ -9,39 +9,40 @@
                 "description": "Update interval in milliseconds",
                 "type": "number",
                 "default": 300000,
-                "required": true,
-                "min": 1000
+                "required": true
             },
             "maxEntries": {
                 "description": "Maximum number of entries displayed in the table",
                 "type": "number",
                 "default": 5,
-                "required": true,
-                "min": 1
+                "required": true
             },
             "stopId": {
                 "description": "Stop ID",
                 "type": "string",
                 "default": "de:09162:6",
-                "required": true,
-                "minLength": 1
+                "required": true
             },
             "filter": {
                 "description": "Filter for specific routes",
                 "type": "object",
                 "properties": {
-                    "S8": {
-                        "description": "S-Bahn Line S8",
+                    "line_name": {
+                        "description": "Line number or ID",
                         "type": "string",
-                        "default": "Herrsching"
+                        "default": "",
+                        "required": false
                     },
-                    "U2": {
-                        "description": "U-Bahn Line U2",
+                    "destination": {
+                        "description": "Destination of the line",
                         "type": "string",
-                        "default": "Messestadt Ost"
+                        "default": "",
+                        "required": false
                     }
-                }
+                },
+                "additionalProperties": true
             }
-        }
+        },
+        "additionalProperties": true
     }
 }
